@@ -18,5 +18,9 @@ def list_products():
     return dfs.to_json(orient='records', lines=True)
 
 
+@app.route('/')
+def list_products():
+    return "hi there"
+
 if __name__ == '__main__':
     app.run()
