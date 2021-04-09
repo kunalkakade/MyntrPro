@@ -19,7 +19,7 @@ def list_products():
 
 
 @app.route('/')
-def list_products():
+def main():
     return "hi there"
 
 if __name__ == '__main__':
