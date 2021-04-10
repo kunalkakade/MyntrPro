@@ -3,8 +3,11 @@ import json
 import pandas as pd
 
 from flask import Flask
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 data = []
 xl_file = pd.ExcelFile('./static/myntra.xlsx')
 
