@@ -9,13 +9,12 @@ CORS(app)
 data = []
 xl_file = pd.ExcelFile('./static/myntra.xlsx')
 
-dfs = pd.read_excel(xl_file, sheet_name="Sheet0")[:50]
+dfs = pd.read_excel(xl_file, sheet_name="Sheet0")[:200]
 
 
 @app.route('/products')
 def list_products():
     return dfs.to_json(orient='records')
-
 
 @app.route('/')
 def main():
