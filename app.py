@@ -31,13 +31,13 @@ def list_products_women():
     return df1.to_json(orient='records')
 
 
-@app.route('/products/boy')
+@app.route('/products/boys')
 def list_products_boy():
     df1 = dfs[dfs['brand'].str.contains("Boys")]
     return df1.to_json(orient='records')
 
 
-@app.route('/products/girl')
+@app.route('/products/girls')
 def list_products_girl():
     df1 = dfs[dfs['brand'].str.contains("Girls")]
     return df1.to_json(orient='records')
